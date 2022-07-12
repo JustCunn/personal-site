@@ -1,0 +1,23 @@
+.press-title {
+    margin: 1em 0 0 2em;
+    font-size: 2.5em;
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: row;
+}
+
+.press-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .press-title {
+        width: 100%;
+        margin: 1em 0 0 0.8em;
+        font-size: 30px;
+        flex-direction: column;
+    }
+}

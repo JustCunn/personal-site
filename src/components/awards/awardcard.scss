@@ -1,0 +1,95 @@
+.awardcard-container {
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.2s,;
+    transition-timing-function: cubic-bezier(0.470, 0.000, 0.515, 0.960);
+    //transition: 0.1s z-index ease-in-out;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 1em;
+
+    height: 20em;
+    width: 20em;
+
+    display: grid;
+    grid-template-rows: minmax(100%, 1fr);
+    grid-template-areas: "stack";
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+.awardcard-container > .card-else-container,
+.awardcard-container > figcaption {
+    grid-area: stack;
+}
+
+.card-else-container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: cover;
+}
+
+.awardcard-container figcaption {
+    grid-area: stack;
+    background-color: white;
+    transform: translateY(calc(100% - 4rem));
+    transition: transform 600ms;
+    padding-top: 1em;
+}
+
+.awardcard-container h3 {
+    height: 4rem;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.awardcard-container p { 
+    margin: 0 1em 0 1em;
+}
+
+.card-cont {
+    position: relative;
+}
+
+.card-text-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-org {
+    margin: 0 0 1em 0;
+    font-weight: bold;
+}
+
+.card-img-container {
+    flex: 1;
+    //margin-right: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
+
+.modal-card-container {
+    transition: all 0.2s,;
+    transition-timing-function: cubic-bezier(0.470, 0.000, 0.515, 0.960);
+}
+
+.awardcard-container:hover {
+    box-shadow: rgba(61, 61, 67, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+.awardcard-container:hover figcaption {
+    transform: none;
+}

@@ -1,0 +1,103 @@
+.projectcard-container {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 3em;
+
+    width: 94%;
+
+    //display: grid;
+    //grid-template-rows: minmax(100%, 1fr);
+    //grid-template-areas: "stack";
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.projectcard-container hr {
+    border-top: 1px solid black;
+}
+
+.project-card-title {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.project-card-time {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 500;
+}
+
+.project-chevron-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+    align-items: center;
+}
+
+.project-chevron-wrapper i {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-desc {
+    margin-bottom: 2em;
+}
+
+.github-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20em);
+    place-items: center;
+    justify-items: flex-start;
+}
+
+.project-desc, .projectcard-container, .project-chevron-wrapper i,
+.github-container {
+    transition: all 0.4s,;
+    transition-timing-function: cubic-bezier(0.470, 0.000, 0.515, 0.960);
+}
+
+.modal-card-container {
+    transition: all 0.2s,;
+    transition-timing-function: cubic-bezier(0.470, 0.000, 0.515, 0.960);
+}
+
+.awardcard-container:hover {
+    box-shadow: rgba(61, 61, 67, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+.awardcard-container:hover figcaption {
+    transform: none;
+}
+
+.project-card-title:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .project-card-title  h1 {
+        font-size: 30px;
+    }
+
+    .project-card-title {
+        align-items: center;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .project-card-time {
+        justify-content: center;
+    }
+}
