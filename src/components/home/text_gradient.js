@@ -9,7 +9,7 @@ import { keyframes } from "styled-components";
 export default function TextGradientComponent(props) {
   return (
     <>
-      <AnimatedGradientText size={props.size}>{props.message}</AnimatedGradientText>
+      <AnimatedGradientText size={props.size} weight={props.weight}>{props.message}</AnimatedGradientText>
     </>
   );
 }
@@ -34,4 +34,5 @@ const AnimatedGradientText = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: ${props => props.size};
+  font-weight: ${props => props.weight};
 `;

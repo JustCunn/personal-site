@@ -12,17 +12,17 @@ import './home.scss';
 
 export default function Home(props) {
 
-    /*const [opacity, setOpacity] = useState(false);
+    const [opacity, setOpacity] = useState(false);
 
     const heroStyle = {
-        backgroundColor: opacity ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,1)'
+        backgroundColor: opacity ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,1)'
     }
 
     useEffect(() => {
         setTimeout(() => {
             setOpacity(true);
-        }, 300);
-    })*/
+        }, 200);
+    })
 
     const nameStyle = {
         background: "-webkit-linear-gradient(180deg, rgba(243,182,253,1) 0%, rgba(198,183,71,1) 100%)",
@@ -42,6 +42,7 @@ export default function Home(props) {
                         <img src={JUSTIN} alt="" />
                     </div>
                 </div>
+                <div className="hide-div" style={heroStyle}></div>
             </div>
             <div className="greeting-container">
                 <TextGradientComponent size={'5.6em'} message="Hi, I'm Justin"/>

@@ -54,6 +54,7 @@ export default function Projects(props) {
                             time={i.time} 
                             desc={i.desc}
                             github={i.github}
+                            tags={i.tags}
                             />
                         )
                     })}

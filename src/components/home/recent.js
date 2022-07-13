@@ -10,7 +10,7 @@ export default function Recent(props) {
 
     const dotStyle = (number) => {
         return ({
-            backgroundColor: (num === number) ? "#000000" : "#8f8f8f" 
+            backgroundColor: (num === number) ? "#000000" : "#b7b7b7" 
         })
     }
 

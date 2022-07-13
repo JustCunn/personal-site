@@ -54,8 +54,15 @@ export default function ProjectCard(props) {
                 <div className="project-desc" style={descStyle}>
                     {props.desc}
                 </div>
+                <div className="tag-wrapper" style={descStyle}>
+                    {props.tags.map((i) => {
+                        return (
+                            <Tag tag={i} />
+                        )
+                    })}
+                </div>
                 <div className="github-container" style={descStyle}>
-                    <h4>GitHub Links</h4>
+                    <h4>Links</h4>
                     <div className="github-grid" >
                         {props.github.map((i) => {
                             return (
@@ -69,30 +76,12 @@ export default function ProjectCard(props) {
     )
 }
 
-function ProjectModal(props) {
-
-    const modalCardStyle = {
-        //height: open ? '100%' : '20em',
-        width: '20em',
-        height: '400px',
-        position: 'absolute',
-        right: '0',
-        left: '0',
-        top: '0',
-        bottom: '0',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: 'auto',
-        marginBottom: 'auto',
-        backgroundColor: 'red',
-        opacity: props.open ? 1 : 0,
-        //transform: props.isOpen ? 'translateY(100%)' : null,
-        //display: props.isOpen ? 'block' : 'none',
-    }
+function Tag(props) {
 
     return (
-        <div className='modal-card-container' style={modalCardStyle}>
-            Lol
+        <div className="tag-container">
+            {props.tag}
         </div>
     )
+
 }

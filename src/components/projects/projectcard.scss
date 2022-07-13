@@ -53,7 +53,26 @@
 }
 
 .project-desc {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.tag-wrapper {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.tag-container {
+    height: 1.8em;
+    background-color: #254429;
+    color: #5FCE61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 1em;
+    margin-right: 1.5em;
+    border-radius: 10px;
+    font-family: monospace!important;
 }
 
 .github-grid {
@@ -64,13 +83,8 @@
 }
 
 .project-desc, .projectcard-container, .project-chevron-wrapper i,
-.github-container {
+.github-container, .tag-wrapper {
     transition: all 0.4s,;
-    transition-timing-function: cubic-bezier(0.470, 0.000, 0.515, 0.960);
-}
-
-.modal-card-container {
-    transition: all 0.2s,;
     transition-timing-function: cubic-bezier(0.470, 0.000, 0.515, 0.960);
 }
 
@@ -99,5 +113,21 @@
 
     .project-card-time {
         justify-content: center;
+    }
+
+    .tag-wrapper {
+        //height: auto;
+        flex-wrap: wrap;
+    }
+
+    .tag-container {
+        height: auto;
+        padding: 2px 1em 2px 1em;
+        margin-bottom: 1em;
+        border-radius: 7px;
+    }
+
+    .project-chevron-wrapper {
+        transform: scale(0.7);
     }
 }

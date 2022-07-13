@@ -58,7 +58,7 @@ export default function RouteBlock(props) {
 
     if (props.route === 'cv') {
         return (
-            <a href="/assets/Justin_CV" download="Justin_Cunningham_CV.pdf" style={LinkStyle}>
+            <a href="/Justin_CV.pdf" download style={LinkStyle}>
                 <div className='rb-container' onMouseEnter={() => setHovered(true)} 
                 onMouseLeave={() => setHovered(false)} style={containerStyle}>
                     <div className="rb-img-container">
